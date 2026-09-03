@@ -1,0 +1,598 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "cell00"
+      },
+      "source": [
+        "# Week 2 Lab — Variables, Types, Input & Output\n",
+        "\n",
+        "**192-101 Computer Programming with Generative AI**\n",
+        "\n",
+        "Reference: *Think Python, 3rd Edition* — Chapter 2 + `input()` from Chapter 5.\n",
+        "Practice problems adapted from *Python 100 Programs* (Devbrat Rudra), **SET-1**.\n",
+        "\n",
+        "---\n",
+        "\n",
+        "### About this lab\n",
+        "\n",
+        "This is a **guided practice notebook** — it is **not graded**.\n",
+        "\n",
+        "Work through the parts **in order**. For each part:\n",
+        "1. Read the short guidance.\n",
+        "2. **Run every code cell** and look at the result.\n",
+        "3. Complete each **Your turn** / **TODO** task.\n",
+        "\n",
+        "> **Run a cell:** click it, then press **Shift + Enter**.\n",
+        "\n",
+        "> **AI-use policy — Level 1 (explain only):** you may ask an AI assistant to *explain* an idea, but **type all the code yourself**. Do not paste AI-written code today."
+      ],
+      "id": "cell00"
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "cell01"
+      },
+      "source": [
+        "## Part 0 — Warm-up: use a variable\n",
+        "\n",
+        "Last week you calculated with numbers directly. This week we **store** them in variables first. Run the cell:"
+      ],
+      "id": "cell01"
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "cell02",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "b32b1626-2dc7-4490-d498-a362f523caaa"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "17\n",
+            "18\n"
+          ]
+        }
+      ],
+      "source": [
+        "n = 17\n",
+        "print(n)\n",
+        "print(n + 1)"
+      ],
+      "id": "cell02"
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "cell03"
+      },
+      "source": [
+        "> An assignment like `n = 17` shows no output by itself — it just stores the value. We use `print()` to see it."
+      ],
+      "id": "cell03"
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "cell04"
+      },
+      "source": [
+        "## Part 1 — Variables and assignment\n",
+        "\n",
+        "A **variable** is a name that refers to a value. You can replace the value, and even update a variable using itself."
+      ],
+      "id": "cell04"
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "cell05",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "d6dd720c-bfc7-48e2-e45a-27c29113d2ce"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "150\n"
+          ]
+        }
+      ],
+      "source": [
+        "price = 50\n",
+        "quantity = 3\n",
+        "print(price * quantity)"
+      ],
+      "id": "cell05"
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "cell06",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "2bd39e40-4c33-40af-f8c7-0ef47b7a0374"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2\n"
+          ]
+        }
+      ],
+      "source": [
+        "count = 0\n",
+        "count = count + 1     # take count, add 1, store it back\n",
+        "count = count + 1\n",
+        "print(count)          # 2"
+      ],
+      "id": "cell06"
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "532d52a4"
+      },
+      "source": [
+        "#### Data type checking\n",
+        "\n",
+        "You can use the `type()` function to check the data type of a variable."
+      ],
+      "id": "532d52a4"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "e89ebc24",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "4abe8900-8268-490f-c152-5541af5d62c3"
+      },
+      "source": [
+        "print(f\"Type of 'price': {type(price)}\")\n",
+        "print(f\"Type of 'quantity': {type(quantity)}\")\n",
+        "print(f\"Type of 'count': {type(count)}\")"
+      ],
+      "id": "e89ebc24",
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Type of 'price': <class 'int'>\n",
+            "Type of 'quantity': <class 'int'>\n",
+            "Type of 'count': <class 'int'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "cell07"
+      },
+      "source": [
+        "**Your turn.** Create two variables, `width` and `height`, give them numbers, then print the **area** (width times height)."
+      ],
+      "id": "cell07"
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "cell08"
+      },
+      "outputs": [],
+      "source": [
+        "# Your code here:\n"
+      ],
+      "id": "cell08"
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "cell09"
+      },
+      "source": [
+        "## Part 2 — Output with print() and f-strings\n",
+        "\n",
+        "An **f-string** lets you drop variables straight into text. Put `f` before the quote and variables inside `{ }`."
+      ],
+      "id": "cell09"
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "cell10"
+      },
+      "outputs": [],
+      "source": [
+        "name = 'James Carter'\n",
+        "age = 70\n",
+        "print(f'Hi {name}, you are {age} years old.')\n",
+        "print(f'Next year you will be {age + 1}.')"
+      ],
+      "id": "cell10"
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "cell11"
+      },
+      "source": [
+        "**Your turn.** Make a variable `city` with your city name, then use an **f-string** to print: `I live in <city>.`"
+      ],
+      "id": "cell11"
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "cell12"
+      },
+      "outputs": [],
+      "source": [
+        "# Your code here:\n"
+      ],
+      "id": "cell12"
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "cell13"
+      },
+      "source": [
+        "## Part 3 — Input from the user (and converting it)\n",
+        "\n",
+        "`input()` pauses the program and waits for the user to type. It always returns **text (a string)**, so convert it with `int()` or `float()` before doing maths.\n",
+        "\n",
+        "> When you run the next cell, a box appears — type a value and press **Enter**."
+      ],
+      "id": "cell13"
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "cell14",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "abd37298-e7f3-417c-8ad2-23c927e02dc4"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "What is your name? LIan\n",
+            "Hello, LIan!\n"
+          ]
+        }
+      ],
+      "source": [
+        "name = input('What is your name? ')\n",
+        "print(f'Hello, {name}!')"
+      ],
+      "id": "cell14"
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 10,
+      "metadata": {
+        "id": "cell15",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "a575d160-596a-4e43-8adc-b51d8760f754"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter your age: 98\n",
+            "In 5 years you will be 103.\n"
+          ]
+        }
+      ],
+      "source": [
+        "text = input('Enter your age: ')\n",
+        "age = int(text)              # convert text to a whole number\n",
+        "print(f'In 5 years you will be {age + 5}.')"
+      ],
+      "id": "cell15"
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "uVjlqzrU8N2i"
+      },
+      "id": "uVjlqzrU8N2i",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "cell16"
+      },
+      "source": [
+        "**Your turn.** Ask the user for a number, convert it, and print the number **doubled**.\n",
+        "\n",
+        "*Hint:* `n = int(input('Enter a number: '))`"
+      ],
+      "id": "cell16"
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "cell17"
+      },
+      "outputs": [],
+      "source": [
+        "# Your code here:\n"
+      ],
+      "id": "cell17"
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "cell18"
+      },
+      "source": [
+        "## Part 4 — Guided problems from the workbook\n",
+        "\n",
+        "These are adapted from *Python 100 Programs*, **SET-1**. Each one follows **Input → Process → Output**. Fill in the `# TODO` lines."
+      ],
+      "id": "cell18"
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "cell19"
+      },
+      "source": [
+        "### Problem A — Simple Calculator  *(SET-1 #2)*\n",
+        "\n",
+        "Read two whole numbers and print their **sum, difference, product, and quotient**.\n",
+        "\n",
+        "*Sample run:*\n",
+        "```\n",
+        "Enter the first number: 8\n",
+        "Enter the second number: 2\n",
+        "Sum: 10\n",
+        "Difference: 6\n",
+        "Product: 16\n",
+        "Quotient: 4.0\n",
+        "```"
+      ],
+      "id": "cell19"
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "cell20"
+      },
+      "outputs": [],
+      "source": [
+        "# Simple Calculator  (adapted from Python 100 Programs, SET-1 #2)\n",
+        "a = int(input('Enter the first number: '))\n",
+        "b = int(input('Enter the second number: '))\n",
+        "\n",
+        "print(f'Sum: {a + b}')          # example — done for you\n",
+        "# TODO: print the Difference (a - b)\n",
+        "# TODO: print the Product   (a * b)\n",
+        "# TODO: print the Quotient  (a / b)"
+      ],
+      "id": "cell20"
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "cell21"
+      },
+      "source": [
+        "### Problem B — Simple Interest Calculator  *(SET-1 #6)*\n",
+        "\n",
+        "Read the **principal**, **rate**, and **time**, then compute simple interest:\n",
+        "\n",
+        "$$ \\text{interest} = \\frac{p \\times r \\times t}{100} $$\n",
+        "\n",
+        "Use `float()` because these can have decimals.\n",
+        "\n",
+        "*Sample run:*\n",
+        "```\n",
+        "Enter the principal amount: 1000\n",
+        "Enter the rate of interest: 5\n",
+        "Enter the time period (years): 2\n",
+        "Simple Interest: 100.0\n",
+        "```"
+      ],
+      "id": "cell21"
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "cell22"
+      },
+      "outputs": [],
+      "source": [
+        "# Simple Interest  (adapted from Python 100 Programs, SET-1 #6)\n",
+        "p = float(input('Enter the principal amount: '))\n",
+        "r = float(input('Enter the rate of interest: '))\n",
+        "t = float(input('Enter the time period (years): '))\n",
+        "\n",
+        "# TODO: compute interest = (p * r * t) / 100\n",
+        "# TODO: print it using an f-string, e.g.  print(f'Simple Interest: {interest}')"
+      ],
+      "id": "cell22"
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "cell23"
+      },
+      "source": [
+        "### Problem C — Area of a Circle  *(SET-1 #8)*\n",
+        "\n",
+        "Read the **radius** and print the area, where area = π × radius × radius.\n",
+        "\n",
+        "> The workbook uses `import math` and `math.pi`. We haven't covered `import` yet (that's **Week 13**), so for now we store π in a variable.\n",
+        "\n",
+        "*Sample run:*\n",
+        "```\n",
+        "Enter the radius of the circle: 5\n",
+        "Area: 78.53975\n",
+        "```"
+      ],
+      "id": "cell23"
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "cell24"
+      },
+      "outputs": [],
+      "source": [
+        "# Area of a Circle  (adapted from Python 100 Programs, SET-1 #8)\n",
+        "pi = 3.14159\n",
+        "radius = float(input('Enter the radius of the circle: '))\n",
+        "\n",
+        "# TODO: area = pi * radius * radius\n",
+        "# TODO: print the area with an f-string"
+      ],
+      "id": "cell24"
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "cell25"
+      },
+      "source": [
+        "### Problem D — Make your own converter  *(challenge)*\n",
+        "\n",
+        "Write a small program from scratch: ask the user for a distance in **kilometres**, convert it to **miles**, and print a clear message.\n",
+        "\n",
+        "*Formula:* 1 km = 0.621371 miles.  *Example output:* `10.0 km is 6.21371 miles`"
+      ],
+      "id": "cell25"
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "cell26"
+      },
+      "outputs": [],
+      "source": [
+        "# Your program here (Input -> Process -> Output):\n"
+      ],
+      "id": "cell26"
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "cell27"
+      },
+      "source": [
+        "## Part 5 — Input → Process → Output (work in pairs)\n",
+        "\n",
+        "With a partner, pick **one** program from Part 4 and describe it as Input → Process → Output.\n",
+        "\n",
+        "**Example — Simple Interest:**\n",
+        "\n",
+        "| Input | Process | Output |\n",
+        "|---|---|---|\n",
+        "| principal, rate, time | interest = (p × r × t) / 100 | the interest amount |\n",
+        "\n",
+        "**Your turn.** Double-click the table below to edit it, and fill in the program you chose:\n",
+        "\n",
+        "| Input | Process | Output |\n",
+        "|---|---|---|\n",
+        "| *(your input here)* | *(what happens)* | *(the result)* |"
+      ],
+      "id": "cell27"
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "cell28"
+      },
+      "source": [
+        "## Part 6 — Learning with an AI assistant (Level 1)\n",
+        "\n",
+        "You may ask an assistant to **explain**, not to write your code. Good Level-1 questions:\n",
+        "\n",
+        "- \"Why does `input()` return a string even when I type a number?\"\n",
+        "- \"Explain the difference between `int()` and `float()` with a simple example.\"\n",
+        "- \"I got a `ValueError` when converting input. In general, what causes that?\"\n",
+        "\n",
+        "**Not allowed today:** asking the assistant to write Problem A/B/C for you and pasting it in."
+      ],
+      "id": "cell28"
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "cell29"
+      },
+      "source": [
+        "## Before you finish — quick checklist\n",
+        "\n",
+        "You should now be able to:\n",
+        "\n",
+        "- [ ] Create variables with `name = value` and reuse them\n",
+        "- [ ] Build output with `print()` and **f-strings**\n",
+        "- [ ] Read input with `input()` and **convert** it using `int()` / `float()`\n",
+        "- [ ] Write a short Input → Process → Output program\n",
+        "- [ ] Complete the Simple Calculator, Simple Interest, and Area of a Circle programs\n",
+        "\n",
+        "**Before Week 3:** make sure all three workbook problems run correctly. Next week we'll make programs **decide** with `if` / `elif` / `else`.\n",
+        "\n",
+        "*Nicely done — these are real, useful programs.*"
+      ],
+      "id": "cell29"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+    },
+    "language_info": {
+      "name": "python",
+      "version": "3.x"
+    },
+    "colab": {
+      "provenance": []
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}
